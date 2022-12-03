@@ -34,7 +34,7 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" id="form3Example3c" class="form-control" />
-                      <label class="form-label" for="form3Example3c">Seu email</label>
+                      <label class="form-label" for="form3Example3c">Seu usuário</label>
                     </div>
                   </div>
 
@@ -50,7 +50,7 @@
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>          
                   </div>
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                <button type="button" class="btn btn-primary btn-lg">Registrar</button> 
+                <a href="dashboard.php"><button type="button" class="btn btn-primary btn-lg">Registrar</button> </a>
                   </div>
 
                 </form>

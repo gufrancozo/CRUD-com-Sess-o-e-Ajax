@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -26,7 +25,7 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" id="form3Example3c" class="form-control" />
-                      <label class="form-label" for="form3Example3c">Seu email</label>
+                      <label class="form-label" for="form3Example3c">Seu usuário</label>
                     </div>
                   </div>
 
@@ -45,7 +44,7 @@
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                      <p class="small fw-bold mt-2 pt-1 mb-0">Não possue conta ? <a href="singup.php"
                       class="link-danger">Registre-se</a></p>
-                    <button type="button" class="btn btn-primary btn-lg">Entrar</button>
+                    <a href="dashboard.php"><button type="button" class="btn btn-primary btn-lg">Entrar</button></a>
                     </div>
                   </div>
                 </form>
