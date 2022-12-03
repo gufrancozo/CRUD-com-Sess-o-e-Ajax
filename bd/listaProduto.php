@@ -12,8 +12,7 @@ $logado = $_SESSION['login'];
 if(isset($_POST['submit'])) {
 
     $instance = DBConnection::getInstance();
-    $conn = $instance->getConnection();
-
+    $conn = $instance->getConnection();+
 
     $sql = 'SELECT * FROM PRODUTO';
 

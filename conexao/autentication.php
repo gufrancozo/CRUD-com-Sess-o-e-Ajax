@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 require_once('../../db/DBConnection.php');
@@ -25,6 +26,7 @@ if(isset($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['password
         $msg = "Login Fail";
         header("location:login.php?msg=$msg");
     }
+
 }
 
 ?>
