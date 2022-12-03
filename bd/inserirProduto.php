@@ -11,20 +11,16 @@
 
     if(isset($_POST['submit'])) {
 
-        Class inserirProduto{
-            public function 
-
-        }
         $instance = DBConnection::getInstance();
         $conn = $instance->getConnection();
 
-        $name = $_POST['name'];
-        $description = $_POST['description'];
-        $qtd_avaliable = $_POST['qtd_avaliable'];
-        $unit_price = $_POST['unit_price'];
+        $nome = $_POST['nome'];
+        $descricao = $_POST['descricao'];
+        $qtd_prdoduto = $_POST['qtd_produto'];
+        $preco_unitario = $_POST['preco_unitario'];
 
 
-        $sql = 'INSERT INTO PRODUTO (NOME,DESCRICAO,PRECO_UNITARIO,QUANTIDADE_ESTOQUE,CATEGORIA_ID) VALUES (?,?,?,?,?)';
+        $sql = 'INSERT INTO PRODUTO (NOME,DESCRICAO,PRECO_UNITARIO,QUANTIDADE_ESTOQUE) VALUES (?,?,?,?)';
 
         try {
             $conn->query($sql);
