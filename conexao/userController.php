@@ -1,5 +1,4 @@
 <?php
-
 class ProductController
 {
     private $db;
@@ -11,29 +10,28 @@ class ProductController
 
     public function user()
     {
-        $user = $_POST["produtos"];
-        $stmt = $this->db->prepare("INSERT INTO PRODUTOS  (USER, EMAIL, PASSWORD) VALUES(?, ?, ?)");
-        $stmt->bindParam(1, $user["produto"]);
-        $stmt->bindParam(2, $user["descricao"]);
-        $stmt->bindParam(1, $user["preco_unitario"]);
-        $stmt->bindParam(2, $user["qtd_produto"]);
+        $user = $_POST["usuario"];
+        $stmt = $this->db->prepare("INSERT INTO USUARIO (USER, EMAIL, PASSWORD) VALUES(?, ?, ?)");
+        $stmt->bindParam(1, $user["user"]);
+        $stmt->bindParam(2, $user["email"]);
+        $hash = hash("md5", $user["password"]);
+        $stmt->bindParam(3, $hash);
         $stmt->execute();
     }
 
     public function update()
     {
-        $user = $_POST["produtos"];
-        $stmt = $this->db->prepare("UPDATE PRODUTOS SET PRODUTO = ?, DESCRICAO = ?, QTD_PRODUTO = ?, PRECO_UNITARIO = ? WHERE ID = ?)");
-        $stmt->bindParam(1, $user["produto"]);
-        $stmt->bindParam(2, $user["descricao"]);
-        $stmt->bindParam(1, $user["preco_unitario"]);
-        $stmt->bindParam(2, $user["qtd_produto"]);
+        $user = $_POST["usuario"];
+        $stmt = $this->db->prepare("UPDATE USUARIO SET USER = ?, EMAIL = ? WHERE ID = ?)");
+        $stmt->bindParam(1, $user["user"]);
+        $stmt->bindParam(2, $user["email"]);
+        $stmt->bindParam(3, $user["id"]);
         $stmt->execute();
     }
 
     public function index()
     {
-        $stmt = $this->db->prepare("SELECT * FROM PRODUTOS");
+        $stmt = $this->db->prepare("SELECT * FROM USUARIO");
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $json = json_encode($results);
@@ -43,7 +41,7 @@ class ProductController
     public function listar()
     {
         $id = $_POST["id"];
-        $stmt = $this->db->prepare("SELECT * FROM PRODUTOS WHERE ID = ?");
+        $stmt = $this->db->prepare("SELECT * FROM USUARIO WHERE USER = ?");
         $stmt->bindParam(1, $id);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -54,7 +52,7 @@ class ProductController
     public function delete()
     {
         $id = $_POST["id"];
-        $stmt = $this->db->prepare("DELETE PRODUTOS WHERE ID = ?");
+        $stmt = $this->db->prepare("DELETE USUARIO WHERE ID = ?");
         $stmt->bindParam(1, $id);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -62,4 +60,3 @@ class ProductController
         return $json;
     }
 }
-
