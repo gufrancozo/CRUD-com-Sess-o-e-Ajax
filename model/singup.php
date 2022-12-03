@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -19,9 +18,18 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registro</p>
 
                 <form class="mx-1 mx-md-4">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Seu nome</label>
+                    </div>
+                  </div>
+
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -41,13 +49,10 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>          
                   </div>
-                  <div id="btn">
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                     <p class="small fw-bold mt-2 pt-1 mb-0">Não possue conta ? <a href="singup.php"
-                      class="link-danger">Registre-se</a></p>
-                    <button type="button" class="btn btn-primary btn-lg">Entrar</button>
-                    </div>
+                <button type="button" class="btn btn-primary btn-lg">Registrar</button> 
                   </div>
+
                 </form>
 
               </div>
@@ -55,7 +60,8 @@
 
                 <img 
                 style="padding-left: 100px;"
-                src="img/signin-image.jpg">
+                src="img/signup-image.jpg"
+                class="img-fluid">
               </div>
             </div>
           </div>
