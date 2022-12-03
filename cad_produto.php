@@ -8,6 +8,24 @@
     <title>Document</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:25px;">
+  <a class="navbar-brand" href="dashboard.php">Listas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="cad_produto.php">Cadastro <span class="sr-only"></span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Sair <span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <section style="margin-top: 25px;">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
